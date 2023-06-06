@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+
+      <!--Our Custom CSS-->
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Space tourism website</title>
+  <script src="navigation.js" defer></script>
+  <!--defer means it will load the page before javascript starts-->
+</head>
+
+<body class="home">
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <header class="primary-header flex">
+        <div>
+            <img src="assets/shared/logo.svg" alt="space tourism logo" class="logo">
+        </div>
+        <!--aria expanded allows the hamburger menu to open when clicking on Menu since it is closed and then Java script will be needed to get that to work, along with an ID in the nav to direct it-->
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+
+        <nav>
+          <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+              <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+              <!--aria-hidden="true" tells screen readers not to read the numbers-->
+              <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination-moon.html"><span aria-hidden="true">01</span>Destination</a>
+              <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a>
+              <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a>
+          </ul>
+        </nav>
+    </header>
+ 
+  <!--Adding main instead of a div allows assistive tech to navigate the page easier-->
+  <main id=main class="grid-container grid-container--home">
+    <div>
+      <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
+      <span class=" d-block fs-900 ff-serif text-white">Space</span>
+      </h1>
+
+      <p class="text-accent">Let’s face it; if you want to go to space, you might as well genuinely go to 
+      outer space and not hover kind of on the edge of it. Well sit back, and relax 
+      because we’ll give you a truly out of this world experience! </p>
+    </div>
+    <div>
+      <a href="destination-moon.html" class="large-button uppercase ff-serif text-dark bg-white">Explore</a>
+    </div>
+  </main>
+
+</body>
+</html>
